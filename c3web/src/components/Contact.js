@@ -108,16 +108,16 @@ const containerStyle = {
 const containerMobile = {
     display: 'flex',
     flexWrap: 'wrap',
-    width: '15vh',
+    width: '22vh',
     height: '20vh',
-    margin: '4%',
+    marginTop: '3%',
     justifyContent: 'center',
     
 }
 
 const imageHolder = {
     display: 'flex',
-    width: '70%',
+    width: '60%',
     height: '70%',
   
 }

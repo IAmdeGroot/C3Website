@@ -3,6 +3,7 @@ import Contact from './Contact'
 import MediaQuery from 'react-responsive';
 import rose from '../img/rose.jpg';
 import johandegroot from '../img/jag.jpg';
+import '../ContactBox.css';
 
 
 
@@ -18,7 +19,7 @@ class ContactBox extends Component {
                  itemHolderMob
 
                  return( 
-                    <div style={STYLE}>
+                    <div style={STYLE} className="scroller">
                     <Contact title='Developer' name='Johan de Groot' email='johde234@student.liu.se' thumbNail={johandegroot} alt='Johan de Groot' />
                     <Contact title='Developer' name='Johan de Groot' email='johde234@student.liu.se' thumbNail={rose} />
                     <Contact title='Developer' name='Johan de Groot' email='johde234@student.liu.se' thumbNail={rose} />

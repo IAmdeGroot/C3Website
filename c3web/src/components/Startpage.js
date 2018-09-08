@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import '../startpage.css';
 import '../Typist.css';
+import background2 from '../img/background2.png';
 import background from '../img/background.png';
 import backgroundmob from '../img/backgroundmob.png';
 import Header from './Header';
@@ -16,6 +17,8 @@ class Startpage extends Component {
   state = {
     showAboutMe: false,
     showContact: false,
+    activeButtonAbout: false,
+    activeButtonContact: false,
      
   }
 
@@ -36,7 +39,12 @@ class Startpage extends Component {
       <div>
         <div style={containerDivStyle}>
         
-            <Header onAboutClick={this.onAboutMeClicked} onContactClick={this.onContactClicked} />
+            <Header 
+            onAboutClick={this.onAboutMeClicked} 
+            onContactClick={this.onContactClicked}
+            activeButtonAbout={this.state.activeButtonAbout} 
+            activeButtonContact={this.state.activeButtonContact} />
+
             <div style={centerContent}>
              {this.renderName()}
             </div>
@@ -69,22 +77,35 @@ class Startpage extends Component {
     
     if (this.state.showAboutMe == true) {
       this.setState({showAboutMe: false})
+      this.setState({activeButtonAbout: false});
+
     } if (this.state.showAboutMe == false) {
     this.setState({showAboutMe: true});
+    this.setState({activeButtonAbout: true});
+    this.setState({activeButtonContact: false});
+    
     } if (this.state.showContact == true) {
     this.setState({showContact: false});
+    this.setState({activeButtonAbout: true});
+    this.setState({activeButtonContact: false});
   }
     }
 
     onContactClicked = () => {
-      
-       if (this.state.showAboutMe == true) {
-        this.setState({showAboutMe: false})
-      } if (this.state.showContact == false) {
-      this.setState({showContact: true});
-      } if (this.state.showContact == true) {
+      if (this.state.showContact == true) {
         this.setState({showContact: false});
-      }
+        this.setState({activeButtonContact: false});
+      
+      }  if (this.state.showContact == false) {
+      this.setState({showContact: true});
+      this.setState({activeButtonContact: true});
+      this.setState({activeButtonAbout: false});
+
+      }  if (this.state.showAboutMe == true) {
+        this.setState({showAboutMe: false})
+        this.setState({activeButtonContact: true});
+        this.setState({activeButtonAbout: false});
+      } 
     }
 
 
@@ -157,7 +178,7 @@ const containerDivStyle ={
   alignItems: 'center',
   flexDirection: 'column',
   position: 'absolute',
-  backgroundImage: `url(${background})`,
+  backgroundImage: `url(${background2})`,
   backgroundSize: 'cover',
  
 }
@@ -234,8 +255,9 @@ const portfolioDesktop = {
   //flexDirection: 'row',
   
   transition: 'height 2s ease-in, opacity 0.5s ease-in',
-  borderColor: 'purple',
+  borderColor: 'white',
   borderStyle: 'solid',
+  border: 0,
   
 
 }

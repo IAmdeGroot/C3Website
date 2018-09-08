@@ -25,8 +25,9 @@ class Header extends Component {
       <img style={logoStyle} src={c3Logo} alt="Logo"/>
       </div>
       <div style={buttonHolderSTYLE}>
-      <HeaderButton name='ABOUT US' onClick={this.props.onAboutClick} />
-      <HeaderButton name='CONTACT' onClick={this.props.onContactClick}/>
+      <HeaderButton name='ABOUT US' onClick={this.props.onAboutClick} activeButtonAbout={this.props.activeButtonAbout} />
+      <p style={buttonSplitter}> l </p>
+      <HeaderButton name='CONTACT' onClick={this.props.onContactClick} activeButtonContact={this.props.activeButtonContact}/>
       </div>
       </div>
       );
@@ -69,11 +70,10 @@ const headerDesktopStyle ={
 const buttonHolderDesktop = {
     display: 'flex',
     height: '100px',
-    width: '500px',
+    width: '30%',
     alignItems: 'center',
     justifyContent: 'center',
     marginLeft: 'auto',
-    
 }
 
 const buttonHolderMobile = {
@@ -98,7 +98,10 @@ const logoStyle  = {
     display: 'flex',
 }
 
-
+const buttonSplitter = {
+    fontSize: '6vh',
+    color: 'white',
+}
  
 
   
