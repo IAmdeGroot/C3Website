@@ -1,17 +1,11 @@
 import React, { Component } from 'react';
 import '../startpage.css';
 import '../Typist.css';
-import Background from '../img/berg2.jpg';
-import ProfileImg from '../img/jag.jpg';
-import BackgroundImg from '../img/background.jpg';
-import ContainerImg from '../img/blackandwhite.jpg';
+import background from '../img/background.png';
+import backgroundmob from '../img/backgroundmob.png';
 import Header from './Header';
-import InfoBox from './InfoBox';
-import PortfolioBox from './PortfolioBox';
+import AboutUs from './AboutUs';
 import ContactBox from './ContactBox';
-import Ball from './Ball';
-import Letter from './Letter';
-import SocialMediaButton from './SocialMediaButton';
 import MediaQuery from 'react-responsive';
 import {Animated} from 'react-animated-css';
 import Typist from 'react-typist';
@@ -20,31 +14,37 @@ import Typist from 'react-typist';
 class Startpage extends Component {
 
   state = {
-    showPortfolio: false,
     showAboutMe: false,
     showContact: false,
      
   }
 
+  toggleWindows = () => {
+
+    if (this.state.showAboutMe === true) {
+      this.setState({showAboutMe: false})
+    }
+
+    if (this.state.showContact === true) {
+      this.setState({showContact: false})
+    }
+
+  }
+
   render() {
     return (
       <div>
-        
         <div style={containerDivStyle}>
-        <div style={tint}>
-        </div>
-      
-            <Header onAboutClick={this.onAboutMeClicked} onPortfolioClick={this.onPortfolioClicked} onContactClick={this.onContactClicked} />
+        
+            <Header onAboutClick={this.onAboutMeClicked} onContactClick={this.onContactClicked} />
             <div style={centerContent}>
              {this.renderName()}
-            
-              </div>
+            </div>
            
         </div>
           <div style={boxContainer}>
-        {this.renderAboutMe()}
-        {this.renderPortfolio()}
-        {this.renderContact()}
+            {this.renderAboutMe()}
+            {this.renderContact()}
           </div>
       </div>
 
@@ -53,36 +53,22 @@ class Startpage extends Component {
 
   
   renderName = () => {
-    return(
-    <MediaQuery minDeviceWidth={1025}>
-    {(matches) => {
-      const STYLE = matches ?
-      jdgDesktop :
-      jdgMobile
-      const LETTER = matches ?
-      letterHolder :
-      letterHolderMobile
-
       return(
-        
         <Typist className="typistStyle" startDelay="1000" stdTypingDelay="300">
          
-          Creative Connected Cloud.
+          Creative Connected <br/> Communications.
           
           </Typist>
-     
+          
+
+          
       ); 
-  }}
-  </MediaQuery>
-    );
   }
 
   onAboutMeClicked = () => {
-    console.log('Click!');
+    
     if (this.state.showAboutMe == true) {
       this.setState({showAboutMe: false})
-    } if (this.state.showPortfolio == true) {
-      this.setState({showPortfolio: false})
     } if (this.state.showAboutMe == false) {
     this.setState({showAboutMe: true});
     } if (this.state.showContact == true) {
@@ -90,29 +76,14 @@ class Startpage extends Component {
   }
     }
 
-    onPortfolioClicked = () => {
-      console.log('PORTFOLIO');
-      if (this.state.showPortfolio == true) {
-        this.setState({showPortfolio: false})
-      } if (this.state.showAboutMe == true) {
-        this.setState({showAboutMe: false})
-      } if (this.state.showPortfolio == false) {
-      this.setState({showPortfolio: true});
-      } if (this.state.showContact == true) {
-        this.setState({showContact: false});
-      }
-    }
-
     onContactClicked = () => {
-      console.log('CONTACT');
-      if (this.state.showPortfolio == true) {
-        this.setState({showPortfolio: false})
-      } if (this.state.showAboutMe == true) {
+      
+       if (this.state.showAboutMe == true) {
         this.setState({showAboutMe: false})
       } if (this.state.showContact == false) {
       this.setState({showContact: true});
       } if (this.state.showContact == true) {
-        this.setState({showContact:false})
+        this.setState({showContact: false});
       }
     }
 
@@ -129,13 +100,14 @@ class Startpage extends Component {
          aboutMeDesktop :
          aboutMeMobile
          return(
-      
+     
       <Animated style={aboutAnimation} animationIn="slideInDown" animationOut="slideOutUp">
       <div style={STYLE}>
-      <InfoBox style={aboutmeBoxStyle} />
+      <AboutUs style={aboutmeBoxStyle} />
     
       </div>
       </Animated>
+      
          );
         }}
       </MediaQuery>
@@ -144,8 +116,8 @@ class Startpage extends Component {
   }
 }
 
-renderPortfolio = () => {
-  if (this.state.showPortfolio == false) {
+renderContact = () => {
+  if (this.state.showContact == false) {
   return null;
  } else {
    return(
@@ -159,7 +131,7 @@ renderPortfolio = () => {
 
    <Animated style={portAnimation} animationIn="slideInDown">
    <div style={STYLE}>
-   <PortfolioBox style={portfolioBoxStyle}/>
+   <ContactBox/>
    </div>
    </Animated>
       );
@@ -167,36 +139,7 @@ renderPortfolio = () => {
    </MediaQuery>
    
  );
-}
-}
-
-renderContact = () => {
-  if (this.state.showContact == false) {
-    return null;
-   } else {
-     return(
-    
-     <MediaQuery minDeviceWidth={1025}>
-       {(matches) => {
-        const STYLE = matches? 
-        aboutMeDesktop :
-        aboutMeMobile
-        return(
-     
-     <Animated style={aboutAnimation} animationIn="slideInDown" animationOut="slideOutUp">
-     <div style={STYLE}>
-     <ContactBox style={aboutmeBoxStyle}
-      infoText=" Johandg7@gmail.com
-                  0768554854"/>
-     </div>
-     </Animated>
-        );
-       }}
-     </MediaQuery>
-     
-   );
- }
-
+  }
 }
 
 }
@@ -213,13 +156,15 @@ const containerDivStyle ={
   justifyContent: 'center',
   alignItems: 'center',
   flexDirection: 'column',
-  position: 'absolute'
+  position: 'absolute',
+  backgroundImage: `url(${background})`,
+  backgroundSize: 'cover',
  
 }
 
 const tint = {
-  backgroundColor: 'black',
-  opacity: '0.8',
+  borderColor: 'blue',
+  borderStyle: 'solid',
   height: '100%',
   width: '100%',
   position: 'absolute'
@@ -237,61 +182,11 @@ const centerContent = {
   
 }
 
-const jdgDesktop = {
-    fontSize: '8vw' ,
-    fontFamily: 'Yeseva One',
-    alignSelf: 'center',
-    color: 'purple',
-    
-}
-
-const jdgMobile = {
-  fontSize: '100px' ,
-  fontFamily: 'Yeseva One',
-  alignSelf: 'center',
-  color: 'white'   
-}
-
-const typistStyle = {
-    fontSize: '8vw' ,
-    fontFamily: 'Yeseva One',
-    alignSelf: 'center',
-    color: 'purple',
-
-}
-
-const letterHolder ={
-  width: '20vw',
-  height: '12vw',
-  position: 'relative',
-  display: 'flex',
-  justifyContent: 'center',
-  alignContent: 'center',
-  flexDirection: 'row',
-  alignSelf: 'center',
- 
-}
-
-const letterHolderMobile ={
-  width: '250px',
-  height: '200px',
-  position: 'absolute',
-  display: 'flex',
-  justifyContent: 'center',
-  alignContent: 'center',
-  flexDirection: 'row',
-  alignSelf: 'center',
-  //borderColor: 'white',
-  //borderStyle: 'solid'
-}
-
-
-
 const boxContainer ={
   display: 'flex',
-  width: '90%',
+  width: '100%',
   height: '80%',
-  position: 'absolute',
+  position: 'fixed',
   marginTop: '15vh',
   justifyContent: 'center',
  
@@ -305,6 +200,7 @@ const aboutMeDesktop = {
   transition: 'height 2s ease-in, opacity 0.5s ease-in',
   borderColor: 'purple',
   borderStyle: 'solid',
+  
 }
 
 const aboutMeMobile = {
@@ -321,7 +217,7 @@ const aboutmeBoxStyle = {
   display: 'flex',
   justifyContent: 'center',
   width: '100%',
-  backgroundColor: 'rgba(0,0,0,0.8)',
+  backgroundColor: 'rgba(0,0,0,0.9)',
 }
 
 const aboutAnimation = {
@@ -332,11 +228,15 @@ const aboutAnimation = {
 
 const portfolioDesktop = {
   width: '100%',
+  height: '100%',
   display: 'flex',
-  position: 'relative',
+  position: 'absolute',
+  //flexDirection: 'row',
+  
   transition: 'height 2s ease-in, opacity 0.5s ease-in',
   borderColor: 'purple',
   borderStyle: 'solid',
+  
 
 }
 
@@ -346,14 +246,7 @@ const portfolioMobile = {
   display: 'flex',
   position: 'relative',
   transition: 'height 0.5s ease-out',
-}
-
-const portfolioBoxStyle = {
-  display: 'flex',
-  width: '100%',
-  backgroundColor: 'rgba(0,0,0,0.8)',
-  flexDirection: 'column'
-
+  justifyContent: 'center',
 }
 
 const portAnimation = {

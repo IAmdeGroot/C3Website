@@ -1,95 +1,87 @@
 import React, { Component } from 'react';
+import Contact from './Contact'
 import MediaQuery from 'react-responsive';
-import Cross from '../img/cross.png';
-import SocialMediaButton from './SocialMediaButton';
-import Profile from '../img/jag.jpg';
+import rose from '../img/rose.jpg';
+import johandegroot from '../img/jag.jpg';
+
 
 
 class ContactBox extends Component {
-  
+
     render() {
         return(
-            
-            <div style={this.props.style}>
-            <div style={textHolder}>
-            
-            {this.renderText()}
-            </div>
-             </div>
+            <MediaQuery minDeviceWidth={1025}>
+                {(matches) => {
 
+                 const STYLE = matches? 
+                 itemHolder :
+                 itemHolderMob
+
+                 return( 
+                    <div style={STYLE}>
+                    <Contact title='Developer' name='Johan de Groot' email='johde234@student.liu.se' thumbNail={johandegroot} alt='Johan de Groot' />
+                    <Contact title='Developer' name='Johan de Groot' email='johde234@student.liu.se' thumbNail={rose} />
+                    <Contact title='Developer' name='Johan de Groot' email='johde234@student.liu.se' thumbNail={rose} />
+                    <Contact title='Developer' name='Johan de Groot' email='johde234@student.liu.se' thumbNail={rose} />
+                    <Contact title='Developer' name='Johan de Groot' email='johde234@student.liu.se' thumbNail={rose} />
+                    <Contact title='Developer' name='Johan de Groot' email='johde234@student.liu.se' thumbNail={rose} />
+                    <Contact title='Developer' name='Johan de Groot' email='johde234@student.liu.se' thumbNail={rose} />
+                    <Contact title='Developer' name='Johan de Groot' email='johde234@student.liu.se' thumbNail={rose} />
+                    <Contact title='Developer' name='Johan de Groot' email='johde234@student.liu.se' thumbNail={rose} />
+                    <Contact title='Developer' name='Johan de Groot' email='johde234@student.liu.se' thumbNail={rose} />
+                    <Contact title='Developer' name='Johan de Groot' email='johde234@student.liu.se' thumbNail={rose} />
+                    <Contact title='Developer' name='Johan de Groot' email='johde234@student.liu.se' thumbNail={rose} />
+                    <Contact title='Developer' name='Johan de Groot' email='johde234@student.liu.se' thumbNail={rose} />
+                    <Contact title='Developer' name='Johan de Groot' email='johde234@student.liu.se' thumbNail={rose} />
+                    <Contact title='Developer' name='Johan de Groot' email='johde234@student.liu.se' thumbNail={rose} />
+                    <Contact title='Developer' name='Johan de Groot' email='johde234@student.liu.se' thumbNail={rose} />
+                    <Contact title='Developer' name='Johan de Groot' email='johde234@student.liu.se' thumbNail={rose} />
+                    <Contact title='Developer' name='Johan de Groot' email='johde234@student.liu.se' thumbNail={rose} />
+                    <Contact title='Developer' name='Johan de Groot' email='johde234@student.liu.se' thumbNail={rose} />
+                    <Contact title='Developer' name='Johan de Groot' email='johde234@student.liu.se' thumbNail={rose} />
+                    <Contact title='Developer' name='Johan de Groot' email='johde234@student.liu.se' thumbNail={rose} />
+                    <Contact title='Developer' name='Johan de Groot' email='johde234@student.liu.se' thumbNail={rose} />
+                    <Contact title='Developer' name='Johan de Groot' email='johde234@student.liu.se' thumbNail={rose} />
+                    <Contact title='Developer' name='Johan de Groot' email='johde234@student.liu.se' thumbNail={rose} />
+                    <Contact title='Developer' name='Johan de Groot' email='johde234@student.liu.se' thumbNail={rose} />
+                    <Contact title='Developer' name='Johan de Groot' email='johde234@student.liu.se' thumbNail={rose} />
+                    <Contact title='Developer' name='Johan de Groot' email='johde234@student.liu.se' thumbNail={rose} />
+                    <Contact title='Developer' name='Johan de Groot' email='johde234@student.liu.se' thumbNail={rose} />
+                    <Contact title='Developer' name='Johan de Groot' email='johde234@student.liu.se' thumbNail={rose} />
+                    <Contact title='Developer' name='Johan de Groot' email='johde234@student.liu.se' thumbNail={rose} />
+                   
+                    </div>
+                 );
+                }
+            }
+            </MediaQuery>
         );
     }
 
-renderText = () => {
-    return(
-    <MediaQuery minDeviceWidth={1025}>
-    {(matches)  => {
-          const STYLE = matches ?
-          textDesktop :
-          textMobile
-          return(
-              <div>
-            <p style={STYLE}> 
-            0768554854 <br/>
-            Johandg7@gmail.com <br/>
-            </p>
-              <div style={socialMediaHolder}>
-              <SocialMediaButton 
-              thumbNail='http://1000logos.net/wp-content/uploads/2017/03/LinkedIn-Logo.png'
-              linkTo='https://www.linkedin.com/in/johan-de-groot-245223128/?trk=public-profile-join-page' 
-              />
-               <SocialMediaButton 
-              thumbNail='http://1000logos.net/wp-content/uploads/2017/03/LinkedIn-Logo.png'
-              linkTo='https://www.linkedin.com/in/johan-de-groot-245223128/?trk=public-profile-join-page' 
-              />
-              <SocialMediaButton 
-              thumbNail='http://1000logos.net/wp-content/uploads/2017/03/LinkedIn-Logo.png'
-              linkTo='https://www.linkedin.com/in/johan-de-groot-245223128/?trk=public-profile-join-page' 
-              />
-              </div>
-              </div>
-
-          );
-
-    }}
-    </MediaQuery>
-    );
 }
 
-}
-
-const textHolder = {
-    //marginRight: 'auto',
+const itemHolder = {
     display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-    width: '90%',
+    width: '100%',
     height: '100%',
-    
+    backgroundColor: 'rgba(0,0,0,0.9)',
+    flexDirection: 'row',
+    justifyContent: 'center',
+    flexWrap: 'wrap',
+    overflowY: 'auto',  
 }
 
-const textDesktop ={
-    fontSize: '1.4vw',
-    color: 'white',
-    fontFamily: 'Architects Daughter'
-
-}
-
-const textMobile = {
-    fontSize: '2vh',
-    color: 'white',
-    fontFamily: 'Architects Daughter'
-
-}
-
-const socialMediaHolder ={
+const itemHolderMob = {
     display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'space-between',
-    width: '20vw',
-    height: '6vw',
-    position: 'relative',
-     
-  }
+    width: '100%',
+    height: '100%',
+    backgroundColor: 'rgba(0,0,0,0.8)',
+    flexDirection: 'row',
+    justifyContent: 'center',
+    flexWrap: 'wrap',
+    overflowY: 'auto',
+    
 
-  export default ContactBox;
+}
+
+export default ContactBox;

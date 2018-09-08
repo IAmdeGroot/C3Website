@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import HeaderButton from './HeaderButton';
 import MediaQuery from 'react-responsive';
-import ProfileImg from '../img/jag.jpg';
 import '../App.css';
+import c3Logo from '../img/c3logo.png';
 
 
 class Header extends Component {
@@ -14,12 +14,20 @@ class Header extends Component {
       const theSTYLE = matches? 
       headerDesktopStyle :
       headerMobileStyle
+
+      const buttonHolderSTYLE = matches?
+      buttonHolderDesktop :
+      buttonHolderMobile
      
       return(
       <div style={theSTYLE}>
+      <div style={logoHolder}>
+      <img style={logoStyle} src={c3Logo} alt="Logo"/>
+      </div>
+      <div style={buttonHolderSTYLE}>
       <HeaderButton name='ABOUT US' onClick={this.props.onAboutClick} />
-      <HeaderButton name='CONTACT' onClick={this.props.onPortfolioClick}/>
-      
+      <HeaderButton name='CONTACT' onClick={this.props.onContactClick}/>
+      </div>
       </div>
       );
     
@@ -37,63 +45,65 @@ const headerMobileStyle = {
     backgroundColor: 'transparent',
     //backgroundColor: 'rgba(0,0,0,0)',
     display: 'flex',
-    justifyContent: 'space-around',
-    position: 'absolute',
+    justifyContent: 'center',
+    alignItems: 'center',
+    position: 'relative',
+    marginBottom: 'auto',
+   
    
 }
 
 const headerDesktopStyle ={
-    height: '100px',
+    height: '120px',
     //width: '400px',
     width: '100%',
     backgroundColor: 'transparent',
     //backgroundColor: 'rgba(0,0,0,0.5)',
     display: 'flex',
-    position: 'relative',
-    justifyContent: 'flex-end',
+    position: 'abosolute',
+    justifyContent: 'flex-start',
     alignItems: 'center',
     marginBottom: 'auto',
-  
 }
 
-  const emailandPicHolder = {
-      display: 'flex',
-      width: '250px',
-      marginLeft: 'auto',
-      justifyContent: 'center',
-      position: 'relative'
-      
-  }
-
-  const emailHolder = {
-      display: 'flex',
-      width: '100%',
-      height: '30%',
-      position: 'absolute',
-      bottom: '0',
-      justifyContent: 'center',
-      alginItems: 'center'
-  }
-
-
-  const emailStyle = {
-      diplay: 'flex',
-      fontSize: '1.5vw',
-      fontFamily: 'Nunito',
-      alignSelf: 'center',
-      marginRight: '3%',
-      color: 'white'
-      
-
-  }
-
-  const imageStyle = {
-    height: '70%',
-    borderRadius: '50%',
+const buttonHolderDesktop = {
     display: 'flex',
-    position: 'absolute',
-    marginTop: '3%'
-  }
+    height: '100px',
+    width: '500px',
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginLeft: 'auto',
+    
+}
+
+const buttonHolderMobile = {
+    display: 'flex',
+    height: '100px',
+    width: '500px',
+    alignItems: 'center',
+    justifyContent: 'center',
+    //marginLeft: 'auto',
+    
+}
+const logoHolder = {
+    display: 'flex',
+    height: '90%',
+    width: '200px',
+    alignItems: 'center',
+    justifyContent: 'center',
+    position: 'relative',
+}
+const logoStyle  = {
+    height: '100%',
+    display: 'flex',
+}
+
+
+ 
+
+  
+
+
 
 
 

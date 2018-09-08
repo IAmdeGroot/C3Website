@@ -1,51 +1,27 @@
 import React, { Component } from 'react';
-import MediaQuery from 'react-responsive';
+import '../headerbutton.css';
+
 
 class HeaderButton extends Component {
     render() {
         return(
-            <button style={headerButtonStyle} onClick={this.props.onClick}>
+            
+            <button className="headerButton"  onClick={this.props.onClick}>
             {this.props.name}
             </button>
+            
         );
     }
 }
 
-
-const headerButtonStyle ={
-    width: '125px',
-    height: '60px',
+const buttonHolder ={
+    width: '30%',
     display: 'flex',
-    marginRight: '3%',
-    position: 'aboslute',
     justifyContent: 'center',
-    //margin: '2vw',
-    backgroundColor: 'transparent',
-    border: '0',
-    //outlineColor: 'white',
-    color: 'white',
-    fontSize: '2vh',
-    fontFamily: 'Raleway',
-    hover: 'red',
-    outlineColor: 'false',
-   
-    
-    
+    alignItems: 'center',
+    position: 'relative', 
+    borderColor: 'purple',
+    borderStyle: 'solid',   
 }
-
-const buttonMobileStyle ={
-    width: '250px',
-    height: '10vh',
-    display: 'flex',
-    alignSelf: 'center',
-    margin: '0.5vw',
-    backgroundColor: 'rgba(0,0,0,0.5)',
-    border: '0',
-    color: 'white',
-    fontSize: '1vw',
-    justifyContent: 'center',
-
-}
-
 
 export default HeaderButton;
