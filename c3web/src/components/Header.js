@@ -21,7 +21,7 @@ class Header extends Component {
      
       return(
       <div style={theSTYLE}>
-      <div style={logoHolder}>
+      <div style={logoHolder} onClick={this.props.onLogoClick}>
       <img style={logoStyle} src={c3Logo} alt="Logo"/>
       </div>
       <div style={buttonHolderSTYLE}>
@@ -65,6 +65,7 @@ const headerDesktopStyle ={
     justifyContent: 'flex-start',
     alignItems: 'center',
     marginBottom: 'auto',
+   
 }
 
 const buttonHolderDesktop = {

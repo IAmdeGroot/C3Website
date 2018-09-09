@@ -14,13 +14,13 @@ class HeaderButton extends Component {
     renderButton = () => {
         if (this.props.activeButtonAbout === false || this.props.activeButtonContact === false) {
             return(
-                <button style={headerButtonStyle}  onClick={this.props.onClick}>
+                <button style={headerButtonStyle} className="headerButton" onClick={this.props.onClick}>
                 {this.props.name}
                 </button>
             );
         } else {
             return(
-                <button style={headerButtonStyleAct}  onClick={this.props.onClick}>
+                <button style={headerButtonStyleAct} className="headerButton" onClick={this.props.onClick}>
                 {this.props.name}
                 </button>
             );

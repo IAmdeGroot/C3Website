@@ -4,6 +4,7 @@ import MediaQuery from 'react-responsive';
 import rose from '../img/rose.jpg';
 import johandegroot from '../img/jag.jpg';
 import '../ContactBox.css';
+import c3logo from '../img/c3logo.png';
 
 
 
@@ -21,11 +22,11 @@ class ContactBox extends Component {
                  return( 
                     <div style={STYLE} className="scroller">
                     <Contact title='Developer' name='Johan de Groot' email='johde234@student.liu.se' thumbNail={johandegroot} alt='Johan de Groot' />
+                    <Contact title='Developer' name='Johan de Groot' email='johde234@student.liu.se' thumbNail={johandegroot} />
                     <Contact title='Developer' name='Johan de Groot' email='johde234@student.liu.se' thumbNail={rose} />
+                    <Contact title='Project Manager' name='Johan de Groot' email='johde234@student.liu.se' thumbNail={rose} />
                     <Contact title='Developer' name='Johan de Groot' email='johde234@student.liu.se' thumbNail={rose} />
-                    <Contact title='Developer' name='Johan de Groot' email='johde234@student.liu.se' thumbNail={rose} />
-                    <Contact title='Developer' name='Johan de Groot' email='johde234@student.liu.se' thumbNail={rose} />
-                    <Contact title='Developer' name='Johan de Groot' email='johde234@student.liu.se' thumbNail={rose} />
+                    <Contact title='Developer' name='Johan de Groot' email='johde234@student.liu.se' thumbNail={johandegroot} />
                     <Contact title='Developer' name='Johan de Groot' email='johde234@student.liu.se' thumbNail={rose} />
                     <Contact title='Developer' name='Johan de Groot' email='johde234@student.liu.se' thumbNail={rose} />
                     <Contact title='Developer' name='Johan de Groot' email='johde234@student.liu.se' thumbNail={rose} />

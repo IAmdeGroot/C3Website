@@ -126,7 +126,7 @@ const imageHolder = {
 const titleHolder = {
     display: 'flex',
     width: '100%',
-    height: '8%',
+    height: '12%',
     alignContent: 'center',
     justifyContent: 'center',
     backgroundColor: 'transparent',
@@ -153,15 +153,18 @@ const emailHolder = {
 const titleDesktop = {
     fontSize: '3vh',
     fontFamily: 'Raleway',
-    color: 'rgb(5, 185, 5)',
+    color: '#6decac',
+    //color: 'white',
+    //color: 'rgb(5, 185, 5)',
     //color: 'purple',
     alignSelf: 'center'
+    
 }
 
 const titleMobile = {
     fontSize: '3vw',
     fontFamily: 'Raleway',
-    color: 'rgb(5, 185, 5)',
+    color: '#6decac',
     alignSelf: 'center'
 }
 

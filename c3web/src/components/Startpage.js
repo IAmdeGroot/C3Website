@@ -42,6 +42,7 @@ class Startpage extends Component {
             <Header 
             onAboutClick={this.onAboutMeClicked} 
             onContactClick={this.onContactClicked}
+            onLogoClick={this.onLogoClick}
             activeButtonAbout={this.state.activeButtonAbout} 
             activeButtonContact={this.state.activeButtonContact} />
 
@@ -62,7 +63,7 @@ class Startpage extends Component {
   
   renderName = () => {
       return(
-        <Typist className="typistStyle" startDelay="1000" stdTypingDelay="300">
+        <Typist className="typistStyle" startDelay="1000" stdTypingDelay="5">
          
           Creative Connected <br/> Communications.
           
@@ -71,6 +72,13 @@ class Startpage extends Component {
 
           
       ); 
+  }
+
+  onLogoClick = () => {
+    this.setState({showAboutMe: false});
+    this.setState({showContact: false});
+    this.setState({activeButtonAbout: false});
+    this.setState({activeButtonContact: false});
   }
 
   onAboutMeClicked = () => {
@@ -178,7 +186,7 @@ const containerDivStyle ={
   alignItems: 'center',
   flexDirection: 'column',
   position: 'absolute',
-  backgroundImage: `url(${background2})`,
+  backgroundImage: `url(${background})`,
   backgroundSize: 'cover',
  
 }
@@ -219,8 +227,8 @@ const aboutMeDesktop = {
   display: 'flex',
   justifyContent: 'center',
   transition: 'height 2s ease-in, opacity 0.5s ease-in',
-  borderColor: 'purple',
-  borderStyle: 'solid',
+  //borderColor: 'purple',
+  //borderStyle: 'solid',
   
 }
 
@@ -253,7 +261,6 @@ const portfolioDesktop = {
   display: 'flex',
   position: 'absolute',
   //flexDirection: 'row',
-  
   transition: 'height 2s ease-in, opacity 0.5s ease-in',
   borderColor: 'white',
   borderStyle: 'solid',
