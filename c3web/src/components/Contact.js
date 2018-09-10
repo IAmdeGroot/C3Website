@@ -153,7 +153,7 @@ const emailHolder = {
 const titleDesktop = {
     fontSize: '3vh',
     fontFamily: 'Raleway',
-    color: '#6decac',
+    color: 'np',
     //color: 'white',
     //color: 'rgb(5, 185, 5)',
     //color: 'purple',

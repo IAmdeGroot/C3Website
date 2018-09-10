@@ -22,35 +22,28 @@ class ContactBox extends Component {
                  return( 
                     <div style={STYLE} className="scroller">
                     <Contact title='Developer' name='Johan de Groot' email='johde234@student.liu.se' thumbNail={johandegroot} alt='Johan de Groot' />
-                    <Contact title='Developer' name='Johan de Groot' email='johde234@student.liu.se' thumbNail={johandegroot} />
-                    <Contact title='Developer' name='Johan de Groot' email='johde234@student.liu.se' thumbNail={rose} />
-                    <Contact title='Project Manager' name='Johan de Groot' email='johde234@student.liu.se' thumbNail={rose} />
-                    <Contact title='Developer' name='Johan de Groot' email='johde234@student.liu.se' thumbNail={rose} />
-                    <Contact title='Developer' name='Johan de Groot' email='johde234@student.liu.se' thumbNail={johandegroot} />
-                    <Contact title='Developer' name='Johan de Groot' email='johde234@student.liu.se' thumbNail={rose} />
-                    <Contact title='Developer' name='Johan de Groot' email='johde234@student.liu.se' thumbNail={rose} />
-                    <Contact title='Developer' name='Johan de Groot' email='johde234@student.liu.se' thumbNail={rose} />
-                    <Contact title='Developer' name='Johan de Groot' email='johde234@student.liu.se' thumbNail={rose} />
-                    <Contact title='Developer' name='Johan de Groot' email='johde234@student.liu.se' thumbNail={rose} />
-                    <Contact title='Developer' name='Johan de Groot' email='johde234@student.liu.se' thumbNail={rose} />
-                    <Contact title='Developer' name='Johan de Groot' email='johde234@student.liu.se' thumbNail={rose} />
-                    <Contact title='Developer' name='Johan de Groot' email='johde234@student.liu.se' thumbNail={rose} />
-                    <Contact title='Developer' name='Johan de Groot' email='johde234@student.liu.se' thumbNail={rose} />
-                    <Contact title='Developer' name='Johan de Groot' email='johde234@student.liu.se' thumbNail={rose} />
-                    <Contact title='Developer' name='Johan de Groot' email='johde234@student.liu.se' thumbNail={rose} />
-                    <Contact title='Developer' name='Johan de Groot' email='johde234@student.liu.se' thumbNail={rose} />
-                    <Contact title='Developer' name='Johan de Groot' email='johde234@student.liu.se' thumbNail={rose} />
-                    <Contact title='Developer' name='Johan de Groot' email='johde234@student.liu.se' thumbNail={rose} />
-                    <Contact title='Developer' name='Johan de Groot' email='johde234@student.liu.se' thumbNail={rose} />
-                    <Contact title='Developer' name='Johan de Groot' email='johde234@student.liu.se' thumbNail={rose} />
-                    <Contact title='Developer' name='Johan de Groot' email='johde234@student.liu.se' thumbNail={rose} />
-                    <Contact title='Developer' name='Johan de Groot' email='johde234@student.liu.se' thumbNail={rose} />
-                    <Contact title='Developer' name='Johan de Groot' email='johde234@student.liu.se' thumbNail={rose} />
-                    <Contact title='Developer' name='Johan de Groot' email='johde234@student.liu.se' thumbNail={rose} />
-                    <Contact title='Developer' name='Johan de Groot' email='johde234@student.liu.se' thumbNail={rose} />
-                    <Contact title='Developer' name='Johan de Groot' email='johde234@student.liu.se' thumbNail={rose} />
-                    <Contact title='Developer' name='Johan de Groot' email='johde234@student.liu.se' thumbNail={rose} />
-                    <Contact title='Developer' name='Johan de Groot' email='johde234@student.liu.se' thumbNail={rose} />
+                    <Contact title='Developer' name='Johan de Groot' email='johde234@student.liu.se' thumbNail={johandegroot} alt='Johan de Groot' />
+                    <Contact title='Developer' name='Johan de Groot' email='johde234@student.liu.se' thumbNail={johandegroot} alt='Johan de Groot' />
+                    <Contact title='Developer' name='Johan de Groot' email='johde234@student.liu.se' thumbNail={johandegroot} alt='Johan de Groot' />
+                    <Contact title='Developer' name='Johan de Groot' email='johde234@student.liu.se' thumbNail={johandegroot} alt='Johan de Groot' />
+                    <Contact title='Developer' name='Johan de Groot' email='johde234@student.liu.se' thumbNail={johandegroot} alt='Johan de Groot' />
+                    <Contact title='Developer' name='Johan de Groot' email='johde234@student.liu.se' thumbNail={johandegroot} alt='Johan de Groot' />
+                    <Contact title='Developer' name='Johan de Groot' email='johde234@student.liu.se' thumbNail={johandegroot} alt='Johan de Groot' />
+                    <Contact title='Developer' name='Johan de Groot' email='johde234@student.liu.se' thumbNail={johandegroot} alt='Johan de Groot' />
+                    <Contact title='Developer' name='Johan de Groot' email='johde234@student.liu.se' thumbNail={johandegroot} alt='Johan de Groot' />
+                    <Contact title='Developer' name='Johan de Groot' email='johde234@student.liu.se' thumbNail={johandegroot} alt='Johan de Groot' />
+                    <Contact title='Developer' name='Johan de Groot' email='johde234@student.liu.se' thumbNail={johandegroot} alt='Johan de Groot' />
+                    <Contact title='Developer' name='Johan de Groot' email='johde234@student.liu.se' thumbNail={johandegroot} alt='Johan de Groot' />
+                    <Contact title='Developer' name='Johan de Groot' email='johde234@student.liu.se' thumbNail={johandegroot} alt='Johan de Groot' />
+                    <Contact title='Developer' name='Johan de Groot' email='johde234@student.liu.se' thumbNail={johandegroot} alt='Johan de Groot' />
+                    <Contact title='Developer' name='Johan de Groot' email='johde234@student.liu.se' thumbNail={johandegroot} alt='Johan de Groot' />
+                    <Contact title='Developer' name='Johan de Groot' email='johde234@student.liu.se' thumbNail={johandegroot} alt='Johan de Groot' />
+                    <Contact title='Developer' name='Johan de Groot' email='johde234@student.liu.se' thumbNail={johandegroot} alt='Johan de Groot' />
+                    <Contact title='Developer' name='Johan de Groot' email='johde234@student.liu.se' thumbNail={johandegroot} alt='Johan de Groot' />
+                    <Contact title='Developer' name='Johan de Groot' email='johde234@student.liu.se' thumbNail={johandegroot} alt='Johan de Groot' />
+                    <Contact title='Developer' name='Johan de Groot' email='johde234@student.liu.se' thumbNail={johandegroot} alt='Johan de Groot' />
+                    <Contact title='Developer' name='Johan de Groot' email='johde234@student.liu.se' thumbNail={johandegroot} alt='Johan de Groot' />
+                    <Contact title='Developer' name='Johan de Groot' email='johde234@student.liu.se' thumbNail={johandegroot} alt='Johan de Groot' />
                    
                     </div>
                  );
