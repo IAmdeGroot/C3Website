@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
 import '../startpage.css';
 import '../Typist.css';
-import background2 from '../img/background2.png';
 import background from '../img/background.png';
-import backgroundmob from '../img/backgroundmob.png';
 import Header from './Header';
 import AboutUs from './AboutUs';
 import ContactBox from './ContactBox';
@@ -23,17 +21,6 @@ class Startpage extends Component {
      
   }
 
-  toggleWindows = () => {
-
-    if (this.state.showAboutMe === true) {
-      this.setState({showAboutMe: false})
-    }
-
-    if (this.state.showContact === true) {
-      this.setState({showContact: false})
-    }
-
-  }
 
   render() {
     return (
@@ -47,15 +34,16 @@ class Startpage extends Component {
             activeButtonHome={this.state.activeButtonHome}
             activeButtonAbout={this.state.activeButtonAbout} 
             activeButtonContact={this.state.activeButtonContact} />
-
             <div style={centerContent}>
              {this.renderName()}
+             
             </div>
            
         </div>
           <div style={boxContainer}>
             {this.renderAboutMe()}
             {this.renderContact()}
+            
           </div>
       </div>
 
@@ -76,6 +64,19 @@ class Startpage extends Component {
       ); 
   }
 
+  renderMadeBy = () => {
+    return(
+      <p className="madeByStyle" startDelay="1000" stdTypingDelay="5">
+       
+        Made by: Developer Johan de Groot <br/>
+        Creative Connected Communications©
+        
+        </p>
+      
+    ); 
+
+  }
+
   onLogoClick = () => {
     this.setState({showAboutMe: false});
     this.setState({showContact: false});
@@ -90,18 +91,18 @@ class Startpage extends Component {
 
   onAboutMeClicked = () => {
     
-    if (this.state.showAboutMe == true) {
+    if (this.state.showAboutMe === true) {
       this.setState({showAboutMe: false})
       this.setState({activeButtonAbout: false});
       this.setState({activeButtonHome: true});
 
-    } if (this.state.showAboutMe == false) {
+    } if (this.state.showAboutMe === false) {
     this.setState({showAboutMe: true});
     this.setState({activeButtonAbout: true});
     this.setState({activeButtonContact: false});
     this.setState({activeButtonHome: false});
     
-    } if (this.state.showContact == true) {
+    } if (this.state.showContact === true) {
     this.setState({showContact: false});
     this.setState({activeButtonAbout: true});
     this.setState({activeButtonContact: false});
@@ -110,18 +111,18 @@ class Startpage extends Component {
     }
 
     onContactClicked = () => {
-      if (this.state.showContact == true) {
+      if (this.state.showContact === true) {
         this.setState({showContact: false});
         this.setState({activeButtonContact: false});
         this.setState({activeButtonHome: true});
       
-      }  if (this.state.showContact == false) {
+      }  if (this.state.showContact === false) {
       this.setState({showContact: true});
       this.setState({activeButtonContact: true});
       this.setState({activeButtonAbout: false});
       this.setState({activeButtonHome: false});
 
-      }  if (this.state.showAboutMe == true) {
+      }  if (this.state.showAboutMe === true) {
         this.setState({showAboutMe: false})
         this.setState({activeButtonContact: true});
         this.setState({activeButtonAbout: false});
@@ -131,7 +132,7 @@ class Startpage extends Component {
 
 
   renderAboutMe = () => {
-     if (this.state.showAboutMe == false) {
+     if (this.state.showAboutMe === false) {
      return null;
     } else {
       return(
@@ -159,7 +160,7 @@ class Startpage extends Component {
 }
 
 renderContact = () => {
-  if (this.state.showContact == false) {
+  if (this.state.showContact === false) {
   return null;
  } else {
    return(
@@ -172,8 +173,8 @@ renderContact = () => {
       return(
 
    <Animated style={portAnimation} animationIn="slideInDown">
-   <div style={STYLE}>
-   <ContactBox/>
+   <div style={STYLE}  >
+   <ContactBox />
    </div>
    </Animated>
       );
@@ -186,10 +187,7 @@ renderContact = () => {
 
 }
 
-
-
 const containerDivStyle ={
-  
   backgroundColor: 'black',
   opacity: '1',
   width: '100vw',
@@ -204,12 +202,13 @@ const containerDivStyle ={
  
 }
 
-const tint = {
-  borderColor: 'blue',
-  borderStyle: 'solid',
-  height: '100%',
+const madeByStyle= {
+  display: 'flex',
+  height: '5%',
   width: '100%',
-  position: 'absolute'
+  justifyContent: 'center',
+  alignItems: 'center',
+  marginTop: 'auto',
 }
 
 const centerContent = {
@@ -220,8 +219,6 @@ const centerContent = {
   justifyContent: 'flex-start',
   alignItems: 'center',
   flexDirection: 'row',
-  
-  
 }
 
 const boxContainer ={
@@ -231,8 +228,6 @@ const boxContainer ={
   position: 'fixed',
   marginTop: '15vh',
   justifyContent: 'center',
- 
-
 }
 
 const aboutMeDesktop = {
@@ -274,12 +269,9 @@ const portfolioDesktop = {
   display: 'flex',
   position: 'absolute',
   //flexDirection: 'row',
+  justifyContent: 'center',
   transition: 'height 2s ease-in, opacity 0.5s ease-in',
-  borderColor: 'white',
-  borderStyle: 'solid',
-  border: 0,
-  
-
+ 
 }
 
 const portfolioMobile = {

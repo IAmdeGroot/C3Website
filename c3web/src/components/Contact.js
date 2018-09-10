@@ -10,9 +10,13 @@ class Contact extends Component {
             containerStyle :
             containerMobile
 
+            const imageSTYLE = matches?
+            imageHolder :
+            imageHolderMobile
+
             return(
             <div style={theSTYLE}>
-                <div style={imageHolder}>
+                <div style={imageSTYLE}>
                 <img src={this.props.thumbNail} style={imgStyle} alt={this.props.alt} />
                 </div>
                     <div style={titleHolder}>
@@ -96,11 +100,12 @@ const containerStyle = {
     //flexDirection: 'row',
 
     display: 'flex',
-    width: '450px',
-    height: '50%',
+    width: '400px',
+    height: '250px',
     flexWrap: 'wrap',
     justifyContent: 'center',
     margin: '1%',
+    
      
     
 }
@@ -110,16 +115,23 @@ const containerMobile = {
     flexWrap: 'wrap',
     width: '22vh',
     height: '20vh',
-    marginTop: '3%',
+    marginBottom: '12%',
     justifyContent: 'center',
+   
     
 }
 
 const imageHolder = {
     display: 'flex',
-    width: '60%',
-    height: '70%',
+    width: '180px',
+    height: '150px',
   
+}
+
+const imageHolderMobile = {
+    display: 'flex',
+    width: '20vh',
+    height: '18vh',  
 }
 
 
@@ -151,7 +163,7 @@ const emailHolder = {
 }
 
 const titleDesktop = {
-    fontSize: '3vh',
+    fontSize: '1.5em',
     fontFamily: 'Raleway',
     color: '#6decac',
     //color: 'white',
@@ -169,7 +181,7 @@ const titleMobile = {
 }
 
 const nameandemailDesktop = {
-    fontSize: '2.5vh',
+    fontSize: '1em',
     fontFamily: 'Raleway',
     color: 'white',
     alignSelf: 'center'

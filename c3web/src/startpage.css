@@ -7,3 +7,13 @@
     
 }
 
+.madeByStyle {
+    display: flex;
+    font-size: 1.5vh;
+    font-family: 'Audiowide';
+    /*color: rgb(5, 185, 5);*/
+    color: gray;
+    margin-left: 1%;
+
+}
+

@@ -46,42 +46,30 @@ const headerMobileStyle = {
     height: '15vh',
     width: '100%',
     backgroundColor: 'transparent',
-    //backgroundColor: 'rgba(0,0,0,0)',
     display: 'flex',
     justifyContent: 'flex-start',
     alignItems: 'center',
     position: 'relative',
     marginBottom: 'auto',
-    
-   
-   
 }
 
 const headerDesktopStyle ={
     height: '120px',
-    //width: '400px',
     width: '100%',
     backgroundColor: 'transparent',
-    //backgroundColor: 'rgba(0,0,0,0.5)',
     display: 'flex',
-    position: 'abosolute',
-    //justifyContent: 'flex-start',
     alignItems: 'center',
     marginBottom: 'auto',
-    
-
-   
 }
 
 const buttonHolderDesktop = {
     display: 'flex',
     height: '100px',
-    width: '35%',
+    width: '100%',
     alignItems: 'center',
     justifyContent: 'flex-end',
     marginLeft: 'auto',
     marginRight: '3%',
-    
 }
 
 const buttonHolderMobile = {

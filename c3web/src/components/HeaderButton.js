@@ -12,7 +12,7 @@ class HeaderButton extends Component {
     }
 
     renderButton = () => {
-        if (this.props.activeButtonAbout === false || this.props.activeButtonContact === false) {
+        if (this.props.activeButtonAbout === false || this.props.activeButtonContact === false || this.props.activeButtonHome === false) {
             return(
                 <button style={headerButtonStyle} className="headerButton" onClick={this.props.onClick}>
                 {this.props.name}
@@ -34,8 +34,7 @@ const buttonHolder ={
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center', 
-    borderColor: 'purple',
-    borderStyle: 'solid',   
+    
 }
 
 const headerButtonStyle = {
