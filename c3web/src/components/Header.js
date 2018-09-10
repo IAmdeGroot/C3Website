@@ -8,7 +8,7 @@ import c3Logo from '../img/c3logo.png';
 class Header extends Component {
     render() {
         return(
-<MediaQuery minDeviceWidth={1025}>
+<MediaQuery minDeviceWidth={767}>
   {(matches) => {
 
       const theSTYLE = matches? 
@@ -25,6 +25,8 @@ class Header extends Component {
       <img style={logoStyle} src={c3Logo} alt="Logo"/>
       </div>
       <div style={buttonHolderSTYLE}>
+      <HeaderButton name='HOME' onClick={this.props.onLogoClick} activeButtonHome={this.props.activeButtonHome} />
+      <p style={buttonSplitter}> l </p>
       <HeaderButton name='ABOUT US' onClick={this.props.onAboutClick} activeButtonAbout={this.props.activeButtonAbout} />
       <p style={buttonSplitter}> l </p>
       <HeaderButton name='CONTACT' onClick={this.props.onContactClick} activeButtonContact={this.props.activeButtonContact}/>
@@ -46,10 +48,11 @@ const headerMobileStyle = {
     backgroundColor: 'transparent',
     //backgroundColor: 'rgba(0,0,0,0)',
     display: 'flex',
-    justifyContent: 'center',
+    justifyContent: 'flex-start',
     alignItems: 'center',
     position: 'relative',
     marginBottom: 'auto',
+    
    
    
 }
@@ -62,19 +65,23 @@ const headerDesktopStyle ={
     //backgroundColor: 'rgba(0,0,0,0.5)',
     display: 'flex',
     position: 'abosolute',
-    justifyContent: 'flex-start',
+    //justifyContent: 'flex-start',
     alignItems: 'center',
     marginBottom: 'auto',
+    
+
    
 }
 
 const buttonHolderDesktop = {
     display: 'flex',
     height: '100px',
-    width: '30%',
+    width: '35%',
     alignItems: 'center',
-    justifyContent: 'center',
+    justifyContent: 'flex-end',
     marginLeft: 'auto',
+    marginRight: '3%',
+    
 }
 
 const buttonHolderMobile = {

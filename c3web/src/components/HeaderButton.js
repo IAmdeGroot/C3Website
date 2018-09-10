@@ -33,8 +33,7 @@ const buttonHolder ={
     width: '30%',
     display: 'flex',
     justifyContent: 'center',
-    alignItems: 'center',
-    position: 'relative', 
+    alignItems: 'center', 
     borderColor: 'purple',
     borderStyle: 'solid',   
 }

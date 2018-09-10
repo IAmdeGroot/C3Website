@@ -1,5 +1,6 @@
 .scroller::-webkit-scrollbar {
     width: 1em;
+    
     background-color: black;
 }
  
@@ -9,5 +10,6 @@
  
 .scroller::-webkit-scrollbar-thumb {
   background-color: purple;
+  height: 1vh;
   
 }

@@ -19,6 +19,7 @@ class Startpage extends Component {
     showContact: false,
     activeButtonAbout: false,
     activeButtonContact: false,
+    activeButtonHome: true,
      
   }
 
@@ -43,6 +44,7 @@ class Startpage extends Component {
             onAboutClick={this.onAboutMeClicked} 
             onContactClick={this.onContactClicked}
             onLogoClick={this.onLogoClick}
+            activeButtonHome={this.state.activeButtonHome}
             activeButtonAbout={this.state.activeButtonAbout} 
             activeButtonContact={this.state.activeButtonContact} />
 
@@ -79,6 +81,11 @@ class Startpage extends Component {
     this.setState({showContact: false});
     this.setState({activeButtonAbout: false});
     this.setState({activeButtonContact: false});
+    this.setState({activeButtonHome: true});
+  }
+
+  onHomeClick = () => {
+
   }
 
   onAboutMeClicked = () => {
@@ -86,16 +93,19 @@ class Startpage extends Component {
     if (this.state.showAboutMe == true) {
       this.setState({showAboutMe: false})
       this.setState({activeButtonAbout: false});
+      this.setState({activeButtonHome: true});
 
     } if (this.state.showAboutMe == false) {
     this.setState({showAboutMe: true});
     this.setState({activeButtonAbout: true});
     this.setState({activeButtonContact: false});
+    this.setState({activeButtonHome: false});
     
     } if (this.state.showContact == true) {
     this.setState({showContact: false});
     this.setState({activeButtonAbout: true});
     this.setState({activeButtonContact: false});
+    this.setState({activeButtonHome: false});
   }
     }
 
@@ -103,16 +113,19 @@ class Startpage extends Component {
       if (this.state.showContact == true) {
         this.setState({showContact: false});
         this.setState({activeButtonContact: false});
+        this.setState({activeButtonHome: true});
       
       }  if (this.state.showContact == false) {
       this.setState({showContact: true});
       this.setState({activeButtonContact: true});
       this.setState({activeButtonAbout: false});
+      this.setState({activeButtonHome: false});
 
       }  if (this.state.showAboutMe == true) {
         this.setState({showAboutMe: false})
         this.setState({activeButtonContact: true});
         this.setState({activeButtonAbout: false});
+        this.setState({activeButtonHome: false});
       } 
     }
 
