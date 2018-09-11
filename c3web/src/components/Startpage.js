@@ -202,15 +202,6 @@ const containerDivStyle ={
  
 }
 
-const madeByStyle= {
-  display: 'flex',
-  height: '5%',
-  width: '100%',
-  justifyContent: 'center',
-  alignItems: 'center',
-  marginTop: 'auto',
-}
-
 const centerContent = {
   display: 'flex',
   height: '50%',

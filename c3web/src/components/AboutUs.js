@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import MediaQuery from 'react-responsive';
+import '../ContactBox.css';
 
 
 
@@ -8,12 +9,23 @@ class AboutUs extends Component {
     render() {
         return(
             
-            <div style={this.props.style}>
-            <div style={textHolder}>
+            <MediaQuery minDeviceWidth={1025}>
+             {(matches) => {
+
+            const STYLE = matches? 
+                textHolder :
+                textHolderMob
+            return(
+
+            <div style={this.props.style} >
+            <div style={STYLE} className="scroller">
             {this.renderText()}
             </div>
              </div>
-
+            );
+             }
+            }
+            </MediaQuery>
         );
     }
 
@@ -24,21 +36,37 @@ renderText = () => {
           const STYLE = matches ?
           textDesktop :
           textMobile
+          const p1STYLE = matches ?
+          p1Desk :
+          p1Mob
+          const p2STYLE = matches ?
+          p2Desk :
+          p2Mob
+          const webmadeSTYLE = matches ?
+          websitemadeDesk :
+          websitemadeMob
           return(
             <p style={STYLE}> 
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eleifend mauris nisl, eget sagittis urna egestas nec. 
-          Morbi at laoreet metus. Duis sollicitudin euismod commodo. Phasellus augue felis, tempus eget nibh nec, malesuada maximus quam. 
-          Vestibulum at eros suscipit, faucibus sem sit amet, porta diam. Nullam ultrices felis id ipsum maximus egestas. Etiam posuere tincidunt massa. Aliquam scelerisque, est ut ultricies commodo, est ipsum laoreet odio, ac gravida orci nisl eu diam.
-           Pellentesque egestas dolor nec ipsum congue volutpat. Mauris dictum ullamcorper mollis. Sed congue augue non placerat consectetur.
+         At C³ we seek to deliver the best media experiences to our customers.
+         Being one of the leading media distributers at Linköping University we 
+         attract top talent from around campus to form a workplace with high expertise and ambitious individuals from all backgrounds. <br/> <br/>
 
-        Phasellus ipsum libero, blandit a feugiat id, facilisis non ligula. 
-        Interdum et malesuada fames ac ante ipsum primis in faucibus. Phasellus mattis nisi eu mi consectetur, at pretium dui facilisis.
-        Etiam sagittis eros libero, consectetur tempus tellus placerat nec. In molestie tincidunt mi, sit amet pharetra ex placerat ut. 
-        In id facilisis ex, in tempus sapien. Praesent nec mauris pulvinar, ullamcorper justo sed, rutrum leo. Donec mattis metus in lobortis varius. 
-        Vestibulum quis massa nisl. Curabitur eu eros fermentum, pretium risus id, vehicula enim.
+<span style={p1STYLE}>C³ is formed by its three defining pillars:<br/></span> <span style={p2STYLE}>Creative Connected Communication.<br/><br/></span>
+ Creativity is a key factor in all of our employees and <span style={p1STYLE}>we </span> always strive to develop new
+  and innovative solutions to reach out to a broader audience. <br/> <br/>
+  At C³, constant communication is vital for us and our customers and staying connected with the industry trends is a requirement as a C³ employee. <br/> 
+With experts from top programs at campus, our empoyees don’t stay up to date with the current industry trends - we <span style={p1STYLE}>create</span> the future trends. <br/> <br/>
+
+Constant communication is what built this company, establishing important relationships in the industry and making sure that customer satisfaction always is met.
+
+Today C³ consists of 25 consultants working full-time to deliver the best media experience <span style={p1STYLE}>for you </span>.
             <br/>
             <br/>
-        Website is made by: Developer Johan de Groot
+       <span style={webmadeSTYLE}> 
+       // Website is made by: Developer, Johan de Groot <br/>
+       // Text is written by: Product Owner, Saam Cedighi <br/>
+       // Server is hosted by: Developer, Armin Ehrenwall
+        </span>
         
             </p>
 
@@ -58,11 +86,22 @@ const textHolder = {
     display: 'flex',
     alignContent: 'center',
     alignSelf: 'center',
-    width: '90%',
+    width: '80%',
     height: '100%',
     overflowY: 'auto',
     
 }
+
+const textHolderMob = {
+    marginLeft: '3%',
+    display: 'flex',
+    alignContent: 'center',
+    alignSelf: 'center',
+    width: '100%',
+    height: '100%',
+    overflowY: 'auto',
+}
+
 
 const textDesktop ={
     fontSize: '1.8vw',
@@ -73,6 +112,47 @@ const textDesktop ={
 
 const textMobile ={
     fontSize: '2vh',
+    color: 'white',
+    fontFamily: 'Architects Daughter'
+
+}
+
+const p1Desk = {
+    fontSize: '1.8vw',
+    color: '#f489f3',
+    fontFamily: 'Architects Daughter'
+
+}
+
+const p1Mob = {
+    fontSize: '2vh',
+    color: '#f489f3',
+    fontFamily: 'Architects Daughter'
+
+}
+
+const p2Desk = {
+    fontSize: '1.8vw',
+    color: '#6decac',
+    fontFamily: 'Audiowide'
+
+}
+const p2Mob ={
+    fontSize: '2vh',
+    color: '#6decac',
+    fontFamily: 'Audiowide'
+
+}
+
+const websitemadeDesk ={
+    fontSize: '1.2vw',
+    color: 'white',
+    fontFamily: 'Architects Daughter'
+
+}
+
+const websitemadeMob ={
+    fontSize: '1.4vh',
     color: 'white',
     fontFamily: 'Architects Daughter'
 

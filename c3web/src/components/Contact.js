@@ -70,7 +70,7 @@ renderEmail = () => {
 
 renderTitle = () => {
     return(
-        <MediaQuery minDeviceWidth={767}>
+        <MediaQuery minDeviceWidth={1025}>
         {(matches) => {
             const STYLE = matches? 
             titleDesktop :
@@ -90,24 +90,13 @@ const imgStyle = {
     width: '100%'
 }
 const containerStyle = {
-   //display: 'flex',
-    //flexWrap: 'wrap',
-    //width: '15vw',
-    //height: '15em',
-    //borderStyle: 'solid',
-    //borderColor: 'red',
-    //margin: '1%',
-    //flexDirection: 'row',
-
+   
     display: 'flex',
     width: '400px',
     height: '250px',
     flexWrap: 'wrap',
     justifyContent: 'center',
     margin: '1%',
-    
-     
-    
 }
 
 const containerMobile = {
@@ -117,8 +106,6 @@ const containerMobile = {
     height: '20vh',
     marginBottom: '12%',
     justifyContent: 'center',
-   
-    
 }
 
 const imageHolder = {
@@ -164,18 +151,15 @@ const emailHolder = {
 }
 
 const titleDesktop = {
-    fontSize: '1.3em',
+    fontSize: '1.2em',
     fontFamily: 'Audiowide',
-    //color: '#6decac',
-    //color: 'white',
-    //color: 'rgb(5, 185, 5)',
     color: '#f489f3',
     alignSelf: 'center'
     
 }
 
 const titleMobile = {
-    fontSize: '3vw',
+    fontSize: '3.0vw',
     fontFamily: 'Audiowide',
     color: '#f489f3',
     alignSelf: 'center'
@@ -189,7 +173,7 @@ const nameandemailDesktop = {
 }
 
 const nameandemailMobile = {
-    fontSize: '1.7vw',
+    fontSize: '1.8vw',
     fontFamily: 'Audiowide',
     color: 'white',
     alignSelf: 'center'
