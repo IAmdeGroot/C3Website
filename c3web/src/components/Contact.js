@@ -164,7 +164,7 @@ const emailHolder = {
 
 const titleDesktop = {
     fontSize: '1.5em',
-    fontFamily: 'Raleway',
+    fontFamily: 'Audiowide',
     color: '#6decac',
     //color: 'white',
     //color: 'rgb(5, 185, 5)',
@@ -175,21 +175,21 @@ const titleDesktop = {
 
 const titleMobile = {
     fontSize: '3vw',
-    fontFamily: 'Raleway',
+    fontFamily: 'Audiowide',
     color: '#6decac',
     alignSelf: 'center'
 }
 
 const nameandemailDesktop = {
     fontSize: '1em',
-    fontFamily: 'Raleway',
+    fontFamily: 'Audiowide',
     color: 'white',
     alignSelf: 'center'
 }
 
 const nameandemailMobile = {
-    fontSize: '2vw',
-    fontFamily: 'Raleway',
+    fontSize: '1.7vw',
+    fontFamily: 'Audiowide',
     color: 'white',
     alignSelf: 'center'
 }

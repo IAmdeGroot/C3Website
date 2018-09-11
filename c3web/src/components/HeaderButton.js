@@ -14,7 +14,9 @@ class HeaderButton extends Component {
     renderButton = () => {
         if (this.props.activeButtonAbout === false || this.props.activeButtonContact === false || this.props.activeButtonHome === false) {
             return(
-                <button style={headerButtonStyle} className="headerButton" onClick={this.props.onClick}>
+                <button 
+                 style={headerButtonStyle}
+                 onClick={this.props.onClick} >
                 {this.props.name}
                 </button>
             );
@@ -27,6 +29,8 @@ class HeaderButton extends Component {
 
         }
     }
+
+    
 }
 
 const buttonHolder ={
