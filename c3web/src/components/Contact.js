@@ -70,7 +70,7 @@ renderEmail = () => {
 
 renderTitle = () => {
     return(
-        <MediaQuery minDeviceWidth={1025}>
+        <MediaQuery minDeviceWidth={767}>
         {(matches) => {
             const STYLE = matches? 
             titleDesktop :
@@ -124,14 +124,15 @@ const containerMobile = {
 const imageHolder = {
     display: 'flex',
     width: '180px',
-    height: '150px',
+    height: '180px',
   
 }
 
 const imageHolderMobile = {
     display: 'flex',
     width: '20vh',
-    height: '18vh',  
+    height: '18vh',
+    marginBottom: '3%',  
 }
 
 
@@ -163,12 +164,12 @@ const emailHolder = {
 }
 
 const titleDesktop = {
-    fontSize: '1.5em',
+    fontSize: '1.3em',
     fontFamily: 'Audiowide',
-    color: '#6decac',
+    //color: '#6decac',
     //color: 'white',
     //color: 'rgb(5, 185, 5)',
-    //color: 'purple',
+    color: '#f489f3',
     alignSelf: 'center'
     
 }
@@ -176,13 +177,13 @@ const titleDesktop = {
 const titleMobile = {
     fontSize: '3vw',
     fontFamily: 'Audiowide',
-    color: '#6decac',
+    color: '#f489f3',
     alignSelf: 'center'
 }
 
 const nameandemailDesktop = {
     fontSize: '1em',
-    fontFamily: 'Audiowide',
+    fontFamily: 'Raleway',
     color: 'white',
     alignSelf: 'center'
 }

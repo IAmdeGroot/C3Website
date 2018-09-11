@@ -36,6 +36,9 @@ renderText = () => {
         Etiam sagittis eros libero, consectetur tempus tellus placerat nec. In molestie tincidunt mi, sit amet pharetra ex placerat ut. 
         In id facilisis ex, in tempus sapien. Praesent nec mauris pulvinar, ullamcorper justo sed, rutrum leo. Donec mattis metus in lobortis varius. 
         Vestibulum quis massa nisl. Curabitur eu eros fermentum, pretium risus id, vehicula enim.
+            <br/>
+            <br/>
+        Website is made by: Developer Johan de Groot
         
             </p>
 
