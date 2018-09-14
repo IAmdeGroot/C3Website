@@ -27,7 +27,9 @@ class Header extends Component {
       <div style={buttonHolderSTYLE}>
       <HeaderButton name='HOME' onClick={this.props.onLogoClick} activeButtonHome={this.props.activeButtonHome} />
       <p style={buttonSplitter}> l </p>
-      <HeaderButton name='ABOUT US' onClick={this.props.onAboutClick} activeButtonAbout={this.props.activeButtonAbout} />
+      <HeaderButton name='NEWS' onClick={this.props.onNewsClick} activeButtonNews={this.props.activeButtonNews} />
+      <p style={buttonSplitter}> l </p>
+      <HeaderButton name='ABOUT' onClick={this.props.onAboutClick} activeButtonAbout={this.props.activeButtonAbout} />
       <p style={buttonSplitter}> l </p>
       <HeaderButton name='CONTACT' onClick={this.props.onContactClick} activeButtonContact={this.props.activeButtonContact}/>
       </div>
@@ -74,8 +76,8 @@ const buttonHolderDesktop = {
 
 const buttonHolderMobile = {
     display: 'flex',
-    height: '100px',
-    width: '500px',
+    height: '100%',
+    width: '100%',
     alignItems: 'center',
     justifyContent: 'center',
     //marginLeft: 'auto',
@@ -84,10 +86,11 @@ const buttonHolderMobile = {
 const logoHolder = {
     display: 'flex',
     height: '90%',
-    width: '200px',
+    width: '120px',
     alignItems: 'center',
     justifyContent: 'center',
     position: 'relative',
+    
 }
 const logoStyle  = {
     height: '100%',

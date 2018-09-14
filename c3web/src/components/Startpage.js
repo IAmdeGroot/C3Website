@@ -4,6 +4,7 @@ import '../Typist.css';
 import background from '../img/background.png';
 import Header from './Header';
 import AboutUs from './AboutUs';
+import News from './News';
 import ContactBox from './ContactBox';
 import MediaQuery from 'react-responsive';
 import {Animated} from 'react-animated-css';
@@ -15,6 +16,8 @@ class Startpage extends Component {
   state = {
     showAboutMe: false,
     showContact: false,
+    showNews: false,
+    activeButtonNews: false,
     activeButtonAbout: false,
     activeButtonContact: false,
     activeButtonHome: true,
@@ -27,11 +30,13 @@ class Startpage extends Component {
       <div>
         <div style={containerDivStyle}>
         
-            <Header 
+            <Header
+            onNewsClick={this.onNewsClicked}
             onAboutClick={this.onAboutMeClicked} 
             onContactClick={this.onContactClicked}
             onLogoClick={this.onLogoClick}
             activeButtonHome={this.state.activeButtonHome}
+            activeButtonNews={this.state.activeButtonNews}
             activeButtonAbout={this.state.activeButtonAbout} 
             activeButtonContact={this.state.activeButtonContact} />
             <div style={centerContent}>
@@ -41,6 +46,7 @@ class Startpage extends Component {
            
         </div>
           <div style={boxContainer}>
+            {this.renderNews()}
             {this.renderAboutMe()}
             {this.renderContact()}
             
@@ -55,7 +61,7 @@ class Startpage extends Component {
       return(
         <Typist className="typistStyle" startDelay="1000" stdTypingDelay="5">
          
-          Creative Connected <br/> Communications.
+          Creative Connected <br/> Communication.
           
           </Typist>
           
@@ -64,22 +70,11 @@ class Startpage extends Component {
       ); 
   }
 
-  renderMadeBy = () => {
-    return(
-      <p className="madeByStyle" startDelay="1000" stdTypingDelay="5">
-       
-        Made by: Developer Johan de Groot <br/>
-        Creative Connected Communications©
-        
-        </p>
-      
-    ); 
-
-  }
-
   onLogoClick = () => {
     this.setState({showAboutMe: false});
     this.setState({showContact: false});
+    this.setState({showNews: false});
+    this.setState({activeButtonNews: false});
     this.setState({activeButtonAbout: false});
     this.setState({activeButtonContact: false});
     this.setState({activeButtonHome: true});
@@ -98,12 +93,15 @@ class Startpage extends Component {
 
     } if (this.state.showAboutMe === false) {
     this.setState({showAboutMe: true});
+    this.setState({activeButtonNews: false});
     this.setState({activeButtonAbout: true});
     this.setState({activeButtonContact: false});
     this.setState({activeButtonHome: false});
     
-    } if (this.state.showContact === true) {
+    } if (this.state.showContact === true || this.state.showNews === true) {
     this.setState({showContact: false});
+    this.setState({showNews: false})
+    this.setState({activeButtonNews: false});
     this.setState({activeButtonAbout: true});
     this.setState({activeButtonContact: false});
     this.setState({activeButtonHome: false});
@@ -119,16 +117,70 @@ class Startpage extends Component {
       }  if (this.state.showContact === false) {
       this.setState({showContact: true});
       this.setState({activeButtonContact: true});
+      this.setState({activeButtonNews: false});
       this.setState({activeButtonAbout: false});
       this.setState({activeButtonHome: false});
 
-      }  if (this.state.showAboutMe === true) {
+      }  if (this.state.showAboutMe === true || this.state.showNews === true) {
         this.setState({showAboutMe: false})
+        this.setState({showNews: false})
         this.setState({activeButtonContact: true});
+        this.setState({activeButtonNews: false});
         this.setState({activeButtonAbout: false});
         this.setState({activeButtonHome: false});
       } 
     }
+
+    onNewsClicked = () => {
+      if (this.state.showNews === true) {
+        this.setState({showNews: false});
+        this.setState({activeButtonNews: false});
+        this.setState({activeButtonHome: true});
+      
+      }  if (this.state.showNews === false) {
+      this.setState({showNews: true});
+      this.setState({activeButtonNews: true});
+      this.setState({activeButtonAbout: false});
+      this.setState({activeButtonContact: false});
+      this.setState({activeButtonHome: false});
+
+      }  if (this.state.showAboutMe === true || this.state.showContact === true ) {
+        this.setState({showAboutMe: false})
+        this.setState({showContact: false})
+        this.setState({activeButtonNews: true});
+        this.setState({activeButtonContact: false});
+        this.setState({activeButtonAbout: false});
+        this.setState({activeButtonHome: false});
+      } 
+    }
+
+    renderNews = () => {
+      if (this.state.showNews === false) {
+      return null;
+     } else {
+       return(
+      
+       <MediaQuery minDeviceWidth={1025}>
+         {(matches) => {
+          const STYLE = matches? 
+          aboutMeDesktop :
+          aboutMeMobile
+          return(
+      
+       <Animated style={aboutAnimation} animationIn="slideInDown" animationOut="slideOutUp">
+       <div style={STYLE}>
+       <News style={aboutmeBoxStyle} />
+     
+       </div>
+       </Animated>
+       
+          );
+         }}
+       </MediaQuery>
+       
+     );
+   }
+ }
 
 
   renderAboutMe = () => {
@@ -200,6 +252,15 @@ const containerDivStyle ={
   backgroundImage: `url(${background})`,
   backgroundSize: 'cover',
  
+}
+
+const madeByStyle= {
+  display: 'flex',
+  height: '5%',
+  width: '100%',
+  justifyContent: 'center',
+  alignItems: 'center',
+  marginTop: 'auto',
 }
 
 const centerContent = {
