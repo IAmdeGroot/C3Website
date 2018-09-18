@@ -82,6 +82,7 @@ const buttonHolderMobile = {
     justifyContent: 'center',
     //marginLeft: 'auto',
     
+    
 }
 const logoHolder = {
     display: 'flex',

@@ -126,7 +126,7 @@ const imageHolderMobile = {
 const titleHolder = {
     display: 'flex',
     width: '100%',
-    height: '12%',
+    height: '8%',
     alignContent: 'center',
     justifyContent: 'center',
     backgroundColor: 'transparent',
@@ -160,7 +160,7 @@ const titleDesktop = {
 }
 
 const titleMobile = {
-    fontSize: '3.0vw',
+    fontSize: '2.0vw',
     fontFamily: 'Audiowide',
     fontStyle: 'regular',
     color: '#f489f3',

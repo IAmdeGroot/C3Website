@@ -6,7 +6,7 @@ import MediaQuery from 'react-responsive';
 import johandegroot from '../img/jag.jpg';
 import saamcedighi from '../img/saamcedighi.jpg';
 import ellikajerna from '../img/ellikajerna.jpg';
-//import erikkarlstrom from '../img/erikkarlstrom.jpg';
+import erikkarlstrom from '../img/erikkarlstrom.jpg';
 import eirikfunnemark from '../img/eirikfunnemark.jpg';
 import hedvigolander from '../img/hedvigolander.jpg';
 import kazembahadori from '../img/kazembahadori.jpg';
@@ -61,7 +61,7 @@ class ContactBox extends Component {
 
                     <Contact title='Product Owner' name='Saam Cedighi' email='saace092@student.liu.se' thumbNail={saamcedighi} alt='Saam Cedighi' />
                     <Contact title='Project Manager' name='Ellika Jernå' email='ellje538@student.liu.se' thumbNail={ellikajerna} alt='Ellika Jernå' />
-                    <Contact title='Process Manager' name='Erik Karlström' email='erika712@student.liu.se' thumbNail={johandegroot} alt='Erik Karlström' />
+                    <Contact title='Process Manager' name='Erik Karlström' email='erika712@student.liu.se' thumbNail={erikkarlstrom} alt='Erik Karlström' />
                     <Contact title='Line Manager' name='Eirik Funnemark' email='eirfu235@student.liu.se' thumbNail={eirikfunnemark} alt='Eirik Funnemark' />
                     <Contact title='Quality Coord.' name='Hedvig Olander' email='hedol060@student.liu.se' thumbNail={hedvigolander} alt='Hedvig Olander' />
                     <Contact title='Config. Manager' name='Kazem Bahadori' email='kazba438@student.liu.se' thumbNail={kazembahadori} alt='Kazem Bahadori' />

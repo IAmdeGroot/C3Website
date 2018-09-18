@@ -47,7 +47,11 @@ renderText = () => {
           websitemadeMob
           return(
             <p style={STYLE}> 
-            <span style={p1STYLE}>Week 37: </span> This week we launched this website, great work from Johan de Groot! We have also presented our innovative ideas to Zenterio.
+            <span style={p1STYLE}>Week 37: </span>
+            The project is now in full motion and we have together with Zenterio decided to continue our work by developing a product that will 
+            boost its catalogue by promoting games based on its popularity in a social video platform. 
+            This will be done by incorporating Twitch.TV and Steam to create an HTML5 application. 
+
         
             </p>
 
