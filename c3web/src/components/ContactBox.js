@@ -15,7 +15,7 @@ import ylvanorrby from '../img/ylvanorrby.jpg';
 import oscarhubertsson from '../img/oscarhubertsson.jpg';
 import axelekenstierna from '../img/axelekenstierna.jpg';
 import rickardhellenberg from '../img/rickardhellenberg.jpg';
-//import gullisphung from '../img/gullisphung.jpg';
+import gullisphung from '../img/gullisphung.jpg';
 import gustavbjornek from '../img/gustavbjornek.jpg';
 import gustavwoxen from '../img/gustavwoxén.jpg';
 import arminehrenwall from '../img/arminehrenwall.png';
@@ -80,7 +80,7 @@ class ContactBox extends Component {
                     
                     
                     <Contact title='Architect' name='Rickard Hellenberg' email='riche828@student.liu.se' thumbNail={rickardhellenberg} alt='Rickard Hellenberg' />
-                    <Contact title='Lead Designer' name='Gullis Phung' email='gulph714@student.liu.se' thumbNail={johandegroot} alt='Gullis Phung' />
+                    <Contact title='Lead Designer' name='Gullis Phung' email='gulph714@student.liu.se' thumbNail={gullisphung} alt='Gullis Phung' />
                     <Contact title='Lead Developer' name='Johan de Groot' email='johde234@student.liu.se' thumbNail={johandegroot} alt='Johan de Groot' />
                     <Contact title='Developer' name='Oscar Lövgren' email='osclo118@student.liu.se' thumbNail={johandegroot} alt='Oscar Lövgren' />
                     <Contact title='Developer' name='Gustav Woxén' email='guswo721@student.liu.se' thumbNail={gustavwoxen} alt='Gustav Woxén ' />
