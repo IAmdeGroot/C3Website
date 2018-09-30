@@ -28,7 +28,7 @@ class Startpage extends Component {
   render() {
     return (
       <div>
-        <div style={containerDivStyle}>
+        <div style={containerDivStyle} >
         
             <Header
             onNewsClick={this.onNewsClicked}

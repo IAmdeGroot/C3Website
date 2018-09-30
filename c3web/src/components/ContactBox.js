@@ -10,7 +10,7 @@ import erikkarlstrom from '../img/erikkarlstrom.jpg';
 import eirikfunnemark from '../img/eirikfunnemark.jpg';
 import hedvigolander from '../img/hedvigolander.jpg';
 import kazembahadori from '../img/kazembahadori.jpg';
-//import nilsjonsson from '../img/nilsjonsson.jpg';
+import nilsjonsson from '../img/nilsjonsson.jpg';
 import ylvanorrby from '../img/ylvanorrby.jpg';
 import oscarhubertsson from '../img/oscarhubertsson.jpg';
 import axelekenstierna from '../img/axelekenstierna.jpg';
@@ -19,6 +19,7 @@ import gullisphung from '../img/gullisphung.jpg';
 import gustavbjornek from '../img/gustavbjornek.jpg';
 import gustavwoxen from '../img/gustavwoxén.jpg';
 import arminehrenwall from '../img/arminehrenwall.png';
+import oscarlovgren from '../img/c3logo.png';
 import joakimsporrong from '../img/joakimsporrong.jpg';
 import kristingylseth from '../img/kristingylseth.jpg';
 import carlgoransson from '../img/carlgoransson.jpg';
@@ -66,7 +67,7 @@ class ContactBox extends Component {
                     <Contact title='Quality Coord.' name='Hedvig Olander' email='hedol060@student.liu.se' thumbNail={hedvigolander} alt='Hedvig Olander' />
                     <Contact title='Config. Manager' name='Kazem Bahadori' email='kazba438@student.liu.se' thumbNail={kazembahadori} alt='Kazem Bahadori' />
                     <Contact title='Deploy. Manager' name='Gustav Björnek' email='gusbj829@student.liu.se' thumbNail={gustavbjornek} alt='Gustav Björnek' />
-                    <Contact title='Lead Analyst' name='Nils Jonsson' email='niljo639@student.liu.se' thumbNail={johandegroot} alt='Nils Jonsson' />
+                    <Contact title='Lead Analyst' name='Nils Jonsson' email='niljo639@student.liu.se' thumbNail={nilsjonsson} alt='Nils Jonsson' />
                     <Contact title='Analyst' name='Ylva Norrby' email='ylvno212@student.liu.se' thumbNail={ylvanorrby} alt='Ylva Norrby' />
                     <Contact title='Analyst' name='Oscar Hubertsson' email='oschu750@student.liu.se' thumbNail={oscarhubertsson} alt='Oscar Hubertsson' />
                     <Contact title='Analyst' name='Axel Ekenstierna' email='axeek359@student.liu.se' thumbNail={axelekenstierna} alt='Axel Ekenstierna' />
@@ -82,9 +83,9 @@ class ContactBox extends Component {
                     <Contact title='Architect' name='Rickard Hellenberg' email='riche828@student.liu.se' thumbNail={rickardhellenberg} alt='Rickard Hellenberg' />
                     <Contact title='Lead Designer' name='Gullis Phung' email='gulph714@student.liu.se' thumbNail={gullisphung} alt='Gullis Phung' />
                     <Contact title='Lead Developer' name='Johan de Groot' email='johde234@student.liu.se' thumbNail={johandegroot} alt='Johan de Groot' />
-                    <Contact title='Developer' name='Oscar Lövgren' email='osclo118@student.liu.se' thumbNail={johandegroot} alt='Oscar Lövgren' />
+                    <Contact title='Lead Developer' name='Armin Ehrenwall' email='armeh223@student.liu.se' thumbNail={arminehrenwall} alt='Armin Ehrenwall' />
+                    <Contact title='Developer' name='Oscar Lövgren' email='osclo118@student.liu.se' thumbNail={oscarlovgren} alt='Oscar Lövgren' />
                     <Contact title='Developer' name='Gustav Woxén' email='guswo721@student.liu.se' thumbNail={gustavwoxen} alt='Gustav Woxén ' />
-                    <Contact title='Developer' name='Armin Ehrenwall' email='armeh223@student.liu.se' thumbNail={arminehrenwall} alt='Armin Ehrenwall' />
                     <Contact title='Developer' name='Joakim Sporrong' email='joasp591@student.liu.se' thumbNail={joakimsporrong} alt='Joakim Sporrong' />
                     <Contact title='UX Designer' name='Kristin Gylseth' email='krigy604@student.liu.se' thumbNail={kristingylseth} alt='Kristin Gylseth' />
                     <Contact title='UX Designer' name='Carl Göransson' email='cargo482@student.liu.se' thumbNail={carlgoransson} alt='Carl Göransson' />
