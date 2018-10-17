@@ -47,6 +47,18 @@ renderText = () => {
           websitemadeMob
           return(
             <p style={STYLE}> 
+            <span style={p1STYLE}>Week 41: </span>
+            I want to start off and thank you all for a great first iteration. We have made huge progress and this will be a perfect stepping stone for
+             further progress and success during the other iterations. 
+             The first version of our product is now up and running live at <a style={p1STYLE} href="http://frontend.c3.netplus.se:3000"> http://frontend.c3.netplus.se:3000. </a>.
+             This week is the start of iteration 2, a period that is going to test us all in the ability of 
+             focusing on both the progress of the project and the upcoming exams. 
+             The planning of this iteration is crucial for a successful result. 
+             But, I believe that after this iteration we will both have an even better product and great exam results to show off. <br/><br/>
+
+             Take some time to enjoy the sunny fall weather! <br/> <br/>
+             //Project Manager Ellika Jernå <br/> <br/>
+
             <span style={p1STYLE}>Week 40: </span>
             Welcome to the last week of sprint 1. The development team has made great progress on the
             product during last week and it will be fun to see the result during the delivery this week.
