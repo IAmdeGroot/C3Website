@@ -47,10 +47,16 @@ renderText = () => {
           websitemadeMob
           return(
             <p style={STYLE}> 
+            <span style={p1STYLE}> Week 47: </span>
+            We are now entering the last sprint of this project and we are truly happy with our product and especially the progress of the team so far!
+            During the final sprint our main focus product wise is to make the UI better in terms of design and UX. We are really excited for the upcoming presentation
+            at Zenterio! <br/><br/>
+
+            // Lead Developer Johan de Groot <br/><br/>
             <span style={p1STYLE}>Week 41: </span>
             I want to start off and thank you all for a great first iteration. We have made huge progress and this will be a perfect stepping stone for
              further progress and success during the other iterations. 
-             The first version of our product is now up and running live at <a style={p1STYLE} href="http://frontend.c3.netplus.se:3000"> http://frontend.c3.netplus.se:3000. </a>.
+             The first version of our product is now up and running live at <a style={p1STYLE} target="_blank" href="http://frontend.c3.netplus.se"> http://frontend.c3.netplus.se. </a>.
              This week is the start of iteration 2, a period that is going to test us all in the ability of 
              focusing on both the progress of the project and the upcoming exams. 
              The planning of this iteration is crucial for a successful result. 

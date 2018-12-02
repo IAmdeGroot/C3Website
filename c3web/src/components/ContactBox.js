@@ -19,7 +19,7 @@ import gullisphung from '../img/gullisphung.jpg';
 import gustavbjornek from '../img/gustavbjornek.jpg';
 import gustavwoxen from '../img/gustavwoxén.jpg';
 import arminehrenwall from '../img/arminehrenwall.png';
-import oscarlovgren from '../img/c3logo.png';
+import oscarlovgren from '../img/oscarlofgren.jpg';
 import joakimsporrong from '../img/joakimsporrong.jpg';
 import kristingylseth from '../img/kristingylseth.jpg';
 import carlgoransson from '../img/carlgoransson.jpg';
